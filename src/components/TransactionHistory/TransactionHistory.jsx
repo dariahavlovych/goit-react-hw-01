@@ -1,11 +1,29 @@
-import React from 'react'
+import React from "react";
 
-const TransactionHistory = () => {
+const TransactionHistory = ({ items }) => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
 
-export default TransactionHistory
+      <tbody>
+        {items.map((item) => {
+          return (
+            <tr key={item.id}>
+              <td>{item.type}</td>
+              <td>{item.amount}</td>
+              <td>{item.currency}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  );
+};
+
+export default TransactionHistory;
