@@ -1,0 +1,23 @@
+.transactionsTable {
+  width: 600px;
+  text-align: center;
+  margin: auto;
+  background-color: grey;
+  margin-bottom: 20px;
+}
+
+.type {
+  text-transform: capitalize;
+}
+
+.tableTitle {
+  background-color: black;
+  color: aliceblue;
+}
+
+.tableRow:nth-child(even) {
+  background-color: lightgray;
+}
+.tableRow:nth-child(odd) {
+  background-color: white;
+}
