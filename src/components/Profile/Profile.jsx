@@ -1,4 +1,5 @@
 import React from "react";
+import s from "./Profile.module.css";
 
 const Profile = ({
   name,
@@ -8,24 +9,25 @@ const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div>
-      <div>
-        <img src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>@{tag}</p> <p>{location}</p>
+    <div className={s.profileCard}>
+      <div className={s.userInfo}>
+        <img className={s.avatar} src={image} alt="User avatar" />
+        <p className={s.userName}>{name}</p>
+        <p className={s.nickName}>@{tag}</p>
+        <p className={s.location}>{location}</p>
       </div>
-      <ul>
+      <ul className={s.stats}>
         <li>
           <span>Followers</span>
-          <span>{followers}</span>
+          <span className={s.statValues}>{followers}</span>
         </li>
         <li>
           <span>Views</span>
-          <span>{views}</span>
+          <span className={s.statValues}>{views}</span>
         </li>
         <li>
           <span>Likes</span>
-          <span>{likes}</span>
+          <span className={s.statValues}>{likes}</span>
         </li>
       </ul>
     </div>
